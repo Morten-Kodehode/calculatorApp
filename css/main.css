@@ -1,1 +1,11 @@
-/*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+}/*# sourceMappingURL=main.css.map */
