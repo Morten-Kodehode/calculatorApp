@@ -2,4 +2,9 @@
 
 body {
   font-family: $fontFamily;
+  height: 100vh;
+}
+
+.appContainer {
+  padding: 25px;
 }
