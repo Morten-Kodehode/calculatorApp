@@ -16,49 +16,55 @@
   <body>
     <div class="appContainer">
       <!-- Header -->
-      <header class="header">
-        <h1 class="header__logo">calc</h1>
-        <div class="header__themeSwitcherContainer">
-          <h2 class="themeSwitch__name">THEME</h2>
-          <div class="themeSwitch__switchContainer">
-            <p class="themeSwitch__themeNums">1 2 3</p>
-            <label class="themeSwitch__switch">
-              <input type="checkbox" />
-              <span class="slider"></span>
-            </label>
+      <div class="header">
+        <h1>calc</h1>
+        <div class="themeSwitch">
+          <h6>THEME</h6>
+          <div class="switcher">
+            <input id="theme1" type="radio" name="theme" value="0" checked />
+            <label for="theme1">1</label>
+
+            <input id="theme2" type="radio" value="1" name="theme" />
+            <label for="theme2">2</label>
+
+            <input id="theme3" type="radio" value="2" name="theme" />
+            <label for="theme3">3</label>
           </div>
         </div>
-      </header>
+      </div>
 
       <!-- Calculations output -->
       <div class="calculationsOutput">
-        <input type="number" id="calcOutput" />
+        <div id="prevOperand" class="prevOperand"></div>
+        <div id="currentOperand" class="currentOperand"></div>
       </div>
 
       <!-- Keypad -->
       <div class="keypad">
+        <button type="button" class="num" value="7">7</button>
+        <button type="button" class="num" value="8">8</button>
+        <button type="button" class="num" value="9">9</button>
+        <button type="button" class="del" value="del" id="del">DEL</button>
+
+        <button type="button" class="num" value="4">4</button>
+        <button type="button" class="num" value="5">5</button>
+        <button type="button" class="num" value="6">6</button>
         <button type="button" class="operator" value="+">+</button>
+
+        <button type="button" class="num" value="1">1</button>
+        <button type="button" class="num" value="2">2</button>
+        <button type="button" class="num" value="3">3</button>
         <button type="button" class="operator" value="-">-</button>
-        <button type="button" class="operator" value="*">*</button>
+
+        <button type="button" class="num" value=".">.</button>
+        <button type="button" class="num" value="0">0</button>
         <button type="button" class="operator" value="/">/</button>
+        <button type="button" class="operator" value="*">*</button>
 
-        <button type="button" value="7">7</button>
-        <button type="button" value="8">8</button>
-        <button type="button" value="9">9</button>
-
-        <button type="button" value="4">4</button>
-        <button type="button" value="5">5</button>
-        <button type="button" value="6">6</button>
-
-        <button type="button" value="1">1</button>
-        <button type="button" value="2">2</button>
-        <button type="button" value="3">3</button>
-
-        <button type="button" value="0">0</button>
-        <button type="button" class="decimal" value=".">.</button>
-        <button type="button" class="reset" value="reset">RESET</button>
-
-        <button type="button" class="equals" value="=">=</button>
+        <button type="button" class="reset" value="reset" id="reset">
+          RESET
+        </button>
+        <button type="button" class="equals" id="equals" value="=">=</button>
       </div>
     </div>
     <script src="js/app.js"></script>

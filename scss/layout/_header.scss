@@ -1,0 +1,98 @@
+@use "../utility" as *;
+@use "../abstracts/" as *;
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  margin-top: 50px;
+
+  & > h1 {
+    color: white;
+    letter-spacing: -0.53px;
+  }
+}
+
+.themeSwitch {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  & > h6 {
+    color: $white;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    margin-right: 25px;
+    align-self: center;
+  }
+}
+
+.switcher {
+  height: 30px;
+  width: 80px;
+  border-radius: 30px;
+  background-color: $backgroundKeypad;
+}
+
+[id="theme1"],
+[id="theme2"],
+[id="theme3"] {
+  appearance: none;
+  position: absolute;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  border-radius: 30px;
+  top: 7px;
+  transition: 0.5s;
+}
+
+[id="theme1"] {
+  margin-left: 8px;
+  top: 57px;
+
+  @include breakpoint-up(large) {
+    // left: 5px;
+  }
+}
+
+[id="theme2"] {
+  margin-left: 25px;
+  top: 57px;
+
+  @include breakpoint-up(large) {
+    // left: 15px;
+  }
+}
+
+[id="theme3"] {
+  margin-left: 40px;
+  top: 57px;
+
+  @include breakpoint-up(large) {
+    // left: 25px;
+  }
+}
+
+input:checked {
+  background-color: $keyShadowRed;
+}
+
+label {
+  position: relative;
+  top: -20px;
+  color: $white;
+  font-size: 0.75rem;
+}
+
+label[for="theme1"] {
+  left: 13px;
+}
+
+label[for="theme2"] {
+  left: 29px;
+}
+
+label[for="theme3"] {
+  left: 44px;
+}

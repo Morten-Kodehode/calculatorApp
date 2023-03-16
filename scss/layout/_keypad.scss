@@ -1,0 +1,51 @@
+@use "../abstracts/" as *;
+@use "../utility/" as *;
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(75px, 1fr));
+  grid-template-rows: repeat(5, minmax(70px, 1fr));
+  justify-content: center;
+  align-items: center;
+  padding: 15px 10px;
+  border-radius: 15px;
+  background-color: $backgroundKeypad;
+
+  & > button {
+    font-size: 2rem;
+    font-family: $fontFamily;
+    font-weight: 700;
+    box-shadow: 0 5px $keysShadow;
+    background-color: $keysBackground;
+    color: hsl(221, 14%, 31%);
+    margin: 8px;
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+  }
+}
+
+.reset,
+.equals {
+  grid-column: span 2;
+}
+
+.reset,
+.del,
+.equals {
+  font-size: 1.25rem !important;
+  padding: 15px 0 !important;
+}
+
+.reset,
+.del {
+  background-color: $keyBackgroundBlue !important;
+  color: $white !important;
+  box-shadow: 0 5px $keyShadowBlue !important;
+}
+
+.equals {
+  background-color: $keyBackgroundRed !important;
+  color: $white !important;
+  box-shadow: 0 5px $keyShadowRed !important;
+}

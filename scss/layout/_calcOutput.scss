@@ -1,0 +1,23 @@
+@use "../abstracts/" as *;
+@use "../utility/" as *;
+
+// Calulations output
+
+.calculationsOutput {
+  background-color: $backgroundScreenBG;
+  height: 80px;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-right: 10px;
+  color: white;
+  overflow: hidden;
+
+  & > .prevOperand {
+    font-size: 15px;
+  }
+}

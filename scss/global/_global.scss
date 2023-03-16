@@ -1,10 +1,19 @@
 @use "../abstracts" as *;
+@use "../utility/" as *;
 
-body {
+body,
+html {
+  background-color: $backgroundMain;
   font-family: $fontFamily;
-  height: 100vh;
 }
 
 .appContainer {
   padding: 25px;
+  padding-top: 0;
+
+  @include breakpoint-up(large) {
+    max-width: 540px;
+    margin: auto;
+    padding: 0;
+  }
 }
